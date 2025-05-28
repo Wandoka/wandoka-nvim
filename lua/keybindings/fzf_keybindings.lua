@@ -74,13 +74,7 @@ vim.keymap.set({'n', 'v'}, '<Leader>sm', function()
 end, { silent = true, desc = "<wandoka> Search marks"})
 
 
-
--- Lists yank history
---
---vim.keymap.set('n', '<Leader>y', function()
---    require('neoclip.fzf')()
+-- Lists yank history (она чота не то делает)
+--vim.keymap.set('n', '<Leader>sy', function()
+--   require('neoclip.fzf')()
 --end, { silent = true, desc = "Open neoclip with fzf" })
-
--- Добавить хоткей - <leader> s + s - Переключение между сессиями
--- Добавить хоткей - <leader> s + S - создание сессии
--- Добавить хоткей - <leader> s + 

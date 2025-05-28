@@ -26,3 +26,45 @@ vim.keymap.set({'n', 't'}, '<C-\\>', '<Cmd>ToggleTerm<CR>', {
   silent = true, 
   desc = "<wandoka> Open a terminal"
 })
+
+-- Lists code actions available for the current line
+vim.keymap.set({'n', 'v'}, '<Leader>ca', function()
+    vim.lsp.buf.code_action()
+end, { silent = true, desc = "<wandoka> LSP Code Actions" })
+
+-- Go up down when wrap enabled
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "<wandoka> Down (smart with wrap)", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "<wandoka> Up (smart with wrap)", expr = true, silent = true })
+
+
+-- Move lines with alt
+vim.keymap.set("n", "<A-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "<wandoka> Move text Down" })
+vim.keymap.set("n", "<A-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "<wandoka> Move text Up" })
+vim.keymap.set("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "<wandoka> Move text Down" })
+vim.keymap.set("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "<wandoka> Move text Up" })
+vim.keymap.set("v", "<A-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "<wandoka> Move text Down" })
+vim.keymap.set("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "<wandoka> Move text Up" })
+
+
+-- Lazygit
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "<wandoka> Lazygit" })
+
+
+-- Diagnostic navigation
+local diagnostic_goto = function(next, severity)
+  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+  severity = severity and vim.diagnostic.severity[severity] or nil
+  return function()
+    go({ severity = severity })
+  end
+end
+vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "<wandok> Next Diagnostic" })
+vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "<wandoka> Prev Diagnostic" })
+vim.keymap.set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "<wandoka> Next Error" })
+vim.keymap.set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "<wandoka> Prev Error" })
+vim.keymap.set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "<wandoka> Next Warning" })
+vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "<wandoka> Prev Warning" })
+
+
+-- Save file with Crtl-s
+vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "<wandoka> Save File" })

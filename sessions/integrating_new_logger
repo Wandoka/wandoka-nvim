@@ -1,0 +1,82 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/work/axel/turbo/integrating_new_logger
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +9 ~/work/axel/turbo/integrating_new_logger/files_to_copy.txt
+badd +231 common/logger/log.hpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_types.cpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_types.hpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_service.h
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_service.cpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_pending.h
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log.cpp
+badd +6 ~/work/axel/turbo/integrating_new_logger/common/logger/log_iterator.cpp
+badd +5 ~/work/axel/turbo/integrating_new_logger/common/logger/lsectorized_memory.hpp
+badd +4 ~/work/axel/turbo/integrating_new_logger/common/logger/lsectorized_memory.cpp
+badd +3 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.hpp
+badd +66 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.cpp
+badd +52 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header.hpp
+badd +2 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage_open_log.cpp
+badd +35 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.hpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.cpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.hpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.cpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_pending.cpp
+badd +17 ~/plan_with_nvimm
+badd +10 sacrum/cb_aps/tasks/task_aps.cpp
+badd +12 sacrum/cb_aps/tasks/task_aps.hpp
+badd +50 common/devui/store_log_par_responder.hpp
+badd +12 common/aps/aps_nnk.cpp
+badd +11 common/aps/aps_palantir.cpp
+badd +12 common/aps/aps_scanner.cpp
+badd +1 sacrum/BSP/hitemp_flashgate.cpp
+badd +6 ~/work/axel/turbo/integrating_new_logger/sacrum/BSP/hitemp_flashgate.hpp
+badd +2 HAL/interfaces/iflash_mem.hpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/HAL/interfaces/II2C.hpp
+badd +19 sacrum/BSP/automotive_flashgate.hpp
+badd +25 ~/work/axel/turbo/integrating_new_logger/common/devui/store_log_par_responder.cpp
+badd +7 ~/work/axel/turbo/integrating_new_logger/parse_seeds.sh
+badd +1 oil:///home/wandoka/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/
+badd +1 ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Makefile
+argglobal
+%argdel
+$argadd oil:///home/wandoka/work/axel/turbo/integrating_new_logger/
+argglobal
+enew
+file oil:///home/wandoka/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Build/
+balt ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Makefile
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

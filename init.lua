@@ -12,18 +12,15 @@ for _, f in pairs(vim.api.nvim_get_runtime_file('lsp/*.lua', true)) do
 end
 
 vim.lsp.enable(lsp_configs)
------------------------------------------------------------------------
+
 -----------------------------------------------------------------------
 ------------------------Additional nevim configs-----------------------
 require("options.general_nvim_options")
+
 -----------------------------------------------------------------------
 ------------------------Hotkeys----------------------------------------
 require("keybindings.fzf_keybindings")
 require("keybindings.general_nvim_keybindings")
 require("keybindings.competitest_cp_keybindings")
--- Lists code actions available for the current line
-vim.keymap.set({'n', 'v'}, '<Leader>g', function()
-    vim.lsp.buf.code_action()
-end, { silent = true, desc = "LSP Code Actions" })
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
