@@ -25,13 +25,13 @@ badd +6 ~/work/axel/turbo/integrating_new_logger/common/logger/log_iterator.cpp
 badd +5 ~/work/axel/turbo/integrating_new_logger/common/logger/lsectorized_memory.hpp
 badd +4 ~/work/axel/turbo/integrating_new_logger/common/logger/lsectorized_memory.cpp
 badd +3 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.hpp
-badd +66 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.cpp
+badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.cpp
 badd +52 ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header.hpp
 badd +2 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage_open_log.cpp
 badd +35 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.hpp
-badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.cpp
+badd +36 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.cpp
 badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.hpp
-badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.cpp
+badd +73 ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.cpp
 badd +1 ~/work/axel/turbo/integrating_new_logger/common/logger/log_pending.cpp
 badd +17 ~/plan_with_nvimm
 badd +10 sacrum/cb_aps/tasks/task_aps.cpp
@@ -47,15 +47,16 @@ badd +1 ~/work/axel/turbo/integrating_new_logger/HAL/interfaces/II2C.hpp
 badd +19 sacrum/BSP/automotive_flashgate.hpp
 badd +25 ~/work/axel/turbo/integrating_new_logger/common/devui/store_log_par_responder.cpp
 badd +7 ~/work/axel/turbo/integrating_new_logger/parse_seeds.sh
-badd +1 oil:///home/wandoka/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/
 badd +1 ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Makefile
+badd +2 ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/interlog_nnk.hpp
+badd +15 ~/personal/cp/workspace/main/main.cpp
+badd +0 oil:///home/wandoka/work/axel/turbo/integrating_new_logger/
 argglobal
 %argdel
 $argadd oil:///home/wandoka/work/axel/turbo/integrating_new_logger/
+edit ~/work/axel/turbo/integrating_new_logger/common/logger/lsector_header_handler.cpp
 argglobal
-enew
-file oil:///home/wandoka/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Build/
-balt ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/Makefile
+balt ~/work/axel/turbo/integrating_new_logger/common/logger/log_reader.cpp
 setlocal foldmethod=manual
 setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
@@ -64,6 +65,14 @@ setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 03|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
