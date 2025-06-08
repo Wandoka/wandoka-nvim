@@ -20,11 +20,25 @@ vim.keymap.set('n', '<leader>ds', function() require("nvim-possession").delete()
 -- Exiting terminal mode
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
--- Opening a terminal
-vim.keymap.set({'n', 't'}, '<C-\\>', '<Cmd>ToggleTerm<CR>', {
-  noremap = true, 
-  silent = true, 
-  desc = "<wandoka> Open a terminal"
+
+-- Opening a terminal 
+--vim.keymap.set({'n', 't'}, '<C-\\>', '<Cmd>ToggleTerm<CR>', {
+--  noremap = true, 
+--  silent = true, 
+--  desc = "<wandoka> Open a terminal"
+--})
+-- Opening a terminal  (with ability to put a number before, to open a specific terminal)
+vim.keymap.set({'n', 't'}, '<C-\\>', function()
+  local count = vim.v.count1
+  if count ~= 0 then
+    vim.cmd(count .. "ToggleTerm")
+  else
+    vim.cmd("ToggleTerm")
+  end
+end, {
+  noremap = true,
+  silent = true,
+  desc = "Toggle terminal (or specific one with number prefix)"
 })
 
 -- Lists code actions available for the current line
@@ -68,3 +82,6 @@ vim.keymap.set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "<wandoka> Pr
 
 -- Save file with Crtl-s
 vim.keymap.set({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "<wandoka> Save File" })
+
+vim.keymap.set("i", "<C-p>", "<C-r>\"", { desc = "Paste from default register" })
+

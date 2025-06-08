@@ -73,6 +73,12 @@ vim.keymap.set({'n', 'v'}, '<Leader>sm', function()
   vim.cmd("Fzf marks")
 end, { silent = true, desc = "<wandoka> Search marks"})
 
+vim.keymap.set({'n', 'v'}, '<Leader>sr', function()
+  vim.cmd("lua require'fzf-lua'.resume()")
+end, { silent = true, desc = "<wandoka> resume previouse search"})
+
+
+
 
 -- Lists yank history (она чота не то делает)
 --vim.keymap.set('n', '<Leader>sy', function()

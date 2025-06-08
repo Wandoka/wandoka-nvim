@@ -1,6 +1,6 @@
 require("options.lazy")
+-----------------------------------------------------------------------
 
----------------------------------------------------------------------
 ------------------------LSP configuration------------------------------
 -- All of lsp configuration files (for different languages) are inside .config/nvim/lsp/ 
 -- We iterate through all of them, and add them to LSP
@@ -22,5 +22,6 @@ require("options.general_nvim_options")
 require("keybindings.fzf_keybindings")
 require("keybindings.general_nvim_keybindings")
 require("keybindings.competitest_cp_keybindings")
+require("keybindings.debugger_keybindings")
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------
