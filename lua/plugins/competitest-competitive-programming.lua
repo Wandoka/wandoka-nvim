@@ -32,6 +32,6 @@ return {
        }
 	  },
 	  testcases_use_single_file = true, 
-    view_output_diff = true, 
+    view_output_diff = false, 
   } end,
 }

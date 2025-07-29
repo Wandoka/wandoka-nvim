@@ -9,9 +9,14 @@ vim.keymap.set('n', '<leader>o', ':Oil<CR>', {
   desc = "<wandoka> Open Oil file explorer"
 })
 
--- Search, new and delete session
-vim.keymap.set('n', '<leader>ss', function() require("nvim-possession").list() end, 
+-- Search, save, new and delete session
+vim.keymap.set('n', '<leader>ss', function() 
+  require("nvim-possession").list() 
+  vim.cmd("filetype detect")
+end, 
   { desc = "<wandoka> list sessions" })
+vim.keymap.set('n', '<leader>ws', function() require("nvim-possession").update() end, 
+  { desc = "<wandoka> save (write) current session" })
 vim.keymap.set('n', '<leader>ns', function() require("nvim-possession").new() end, 
   { desc = "<wandoka> create new session" })
 vim.keymap.set('n', '<leader>ds', function() require("nvim-possession").delete() end, 
@@ -27,6 +32,7 @@ vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = 
 --  silent = true, 
 --  desc = "<wandoka> Open a terminal"
 --})
+
 -- Opening a terminal  (with ability to put a number before, to open a specific terminal)
 vim.keymap.set({'n', 't'}, '<C-\\>', function()
   local count = vim.v.count1

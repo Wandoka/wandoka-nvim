@@ -18,14 +18,7 @@ return {
 
         save_hook = nil, -- callback, function to execute before saving a session
                         -- useful to update or cleanup global variables for example
-        post_hook = nil, -- callback, function to execute after loading a session
-                        -- useful to restore file trees, file managers or terminals
-                        -- function()
-                        --     require('FTerm').open()
-                        --     require("nvim-tree.api").tree.toggle()
-                        -- end
-
-        ---@type possession.Hls
+        post_hook = nil,
         fzf_hls = { -- highlight groups for the sessions and preview windows
             normal = "Normal",
             preview_normal = "Normal",

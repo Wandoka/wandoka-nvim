@@ -35,7 +35,7 @@ if vim.fn.has("wsl") == 1 then
 end
 
 
--- DIsables LSP text highlighting by setting it's priority lower that treesitter's
+-- Disables LSP text highlighting by setting it's priority lower that treesitter's
 vim.highlight.priorities.semantic_tokens = 90
 vim.highlight.priorities.treesitter = 100
 

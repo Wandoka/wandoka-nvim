@@ -32,7 +32,12 @@ return {
             description = 'Enable pretty printing',
             ignoreFailures = false
           },
-        }, 
+        },
+        args = function()
+          local filepath = vim.api.nvim_buf_get_name(0)
+          local dir = vim.fn.fnamemodify(filepath, ":h") -- директория файла
+          return { dir .. "/debug_input.txt" }
+        end,
       }
     }
   end

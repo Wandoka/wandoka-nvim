@@ -17,6 +17,7 @@ return {
           Type = { fg = colors.palette.inkViolet, italic = false },
           --Operator = { fg = colors.palette.inkRed, italic = true },
           Number = { fg = colors.palette.inkOrange2, italic = false },
+          Comment = {italic = false},
 
 
           String = { fg = colors.palette.inkWhite, italic = false },
