@@ -43,4 +43,11 @@ vim.keymap.set(
   end,
   { noremap = true, silent = true, desc = "<wandoka> run current cpp" }
 )
+vim.keymap.set(
+  "n",
+  "<leader>gt",
+  ":CompetiTest receive testcases<CR>",
+  { noremap = true, silent = true, desc = "<wandoka> get testcases from browser extention (ctrl+shift+U in browser)" }
+)
+
 
