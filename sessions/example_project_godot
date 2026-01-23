@@ -1,0 +1,99 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +1 src/player/over_shoulder_camera_controller.gd
+badd +1 ~/.config/nvim/lsp/clangd.lua
+badd +16 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/README.md
+badd +2 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/LICENSE
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/primary_theme.tres
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/project.godot
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/LICENSE
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/icon.svg
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/icon.svg.import
+badd +71 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/monitor_overlay.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/monitor_overlay_debug_graph.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/plugin.cfg
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/addons/monitor_overlay/monitor_overlay_plugin.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/assets/fonts/gamjaflower_regular.ttf
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/assets/fonts/gamjaflower_regular.ttf.import
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/src/player/circle_face.tscn
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/src/player/focus_assist_camera_controller.gd
+badd +1 ~/work/axel/turbo/turbo_log_parser/RawText.txt
+badd +1 ~/work/axel/turbo/turbo_log_parser/System.log
+badd +1 ~/work/axel/turbo/turbo_log_parser/get_logs_from_zip.sh
+badd +1 ~/work/axel/turbo/turbo_log_parser/Memory.info
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/sacrum/prebuild.sh
+badd +1 ~/personal/cp/workspace/main/main.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_assistant/tm_turbo_assistant.cpp
+badd +247 ~/work/axel/turbo/tm_turbo_assistant/common/log_message/mnem_id.proto
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/log_message/log.proto
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/log_message/log.options
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.cpp
+badd +35 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_communicate_with_tm.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_incremental_id_interface.cpp
+badd +11 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/functions_that_dll_provides.cpp
+badd +27 ~/.config/nvim/lsp/harper_ls.lua
+badd +14 ~/.config/nvim/init.lua
+badd +1 ~/.config/nvim/lazy-lock.json
+badd +1 ~/.config/nvim/plan_with_nvim
+badd +1 ~/.config/nvim/lua/compilation_flags.lua
+badd +1 ~/.config/nvim/lua/keybindings/competitest_cp_keybindings.lua
+badd +23 ~/.config/nvim/lua/keybindings/debugger_keybindings.lua
+badd +2 ~/.config/nvim/lua/keybindings/fzf_keybindings.lua
+badd +1 ~/.config/nvim/lua/keybindings/general_nvim_keybindings.lua
+badd +1 ~/.config/nvim/lsp/godot.lua
+badd +23 ~/.config/nvim/lua/plugins/mason-lspmanager.lua
+badd +4 ~/.config/nvim/lua/options/lazy.lua
+badd +25 ~/.config/nvim/lua/options/general_nvim_options.lua
+badd +1 ~/.config/nvim/README.md
+badd +1 /mnt/c/programming/test/scripts/button.gd.uid
+argglobal
+%argdel
+$argadd oil:///mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/
+edit /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/src/player/focus_assist_camera_controller.gd
+argglobal
+balt /mnt/c/Users/rl/OneDrive/Documents/stride_kit_3d/LICENSE
+setlocal foldmethod=manual
+setlocal foldexpr=<SNR>64_GDScriptFoldLevel()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

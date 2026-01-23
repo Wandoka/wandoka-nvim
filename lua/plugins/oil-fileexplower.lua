@@ -7,6 +7,20 @@ return {
     keymaps = {
       ["<C-s>"] = false, -- отключить вертикальный сплит на Ctrl+S
     },
+    view_options = {
+      is_hidden_file = function(name, bufnr)
+        if not name then return false end
+        -- начинается с точки (скрытый в unix)
+        if name:match("^%.") then
+          return true
+        end
+        -- оканчивается на ".gd.uid" — обратите внимание: точки экранированы
+        if name:match("%.gd%.uid$") then
+          return true
+        end
+        return false
+      end
+    }
   },
   -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },

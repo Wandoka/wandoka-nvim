@@ -1,0 +1,90 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/work/axel/stm_bootloader
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +30 embedded_program/hardware_depended_src/stm4xx/ports_info.h
+badd +136 embedded_program/Makefile
+badd +1 ~/work/axel/upu/make_ind.sh
+badd +5 ~/work/axel/upu/make_proshivka_ind.sh
+badd +1 embedded_program/openocd_log.txt
+badd +1 embedded_program/openocd.sh
+badd +11 embedded_program/src/main.c
+badd +63 embedded_program/test_device.sh
+badd +9 shared_src/shared_constants.h
+badd +79 computer_program/main.c
+badd +13 embedded_program/hardware_depended_src/stm4xx/uart_lowlevel.c
+badd +1 embedded_program/src/run_program_from_address.h
+badd +1 embedded_program/src/memory_protection.h
+badd +1 embedded_program/src/global_buffers.h
+badd +1 embedded_program/src/global_buffers.c
+badd +1 embedded_program/src/flash_special_addresses.h
+badd +1 embedded_program/src/flash_special_addresses.c
+badd +1 embedded_program/src/error_codes.h
+badd +1 embedded_program/src/data_transfer_protocol_lowlevel.h
+badd +1 embedded_program/src/data_transfer_protocol_lowlevel.c
+badd +30 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/script_sysfuncs/script_sysfuncs.cpp
+badd +339 embedded_program/hardware_depended_src/stm32f429/stm32f429xx.h
+badd +3 embedded_program/hardware_depended_src/stm4xx/rcc_initialize.c
+badd +19 embedded_program/hardware_depended_src/stm4xx/gpio_abstraction.h
+badd +82 ~/notes/07112025.txt
+badd +363 /usr/include/stdio.h
+badd +1 ~/work/axel/turbo/integrating_new_logger/sacrum/cb_aps/script_sysfuncs/nnk_compr.h
+badd +2 embedded_program/hardware_depended_src/stm4xx/memory_protection.c
+badd +1 embedded_program/hardware_depended_src/stm4xx/lightbulb.c
+badd +28 embedded_program/hardware_depended_src/stm4xx/flash_lowlevel.c
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/uart_lowlevel.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/uart_highlevel.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/uart_highlevel.c
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/read_from_flash.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/read_from_flash.c
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/rcc_initialize.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/lightbulb.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/src/peripherals/flash_lowlevel.h
+badd +1 ~/work/axel/stm_bootloader/embedded_program/hardware_depended_src/stm4xx/run_program_from_address.c
+badd +19 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_assistant/aps_commands.cpp
+badd +24 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/params_list.hpp
+badd +13 embedded_program/example_program_to_upload/example_main_slow_blinking.c
+badd +114 ~/work/axel/stm_device_emulator/src/trans_rs485_thr.c
+badd +48 ~/work/axel/stm_device_emulator/src/trans_rs485_thr.h
+argglobal
+%argdel
+$argadd oil:///home/wandoka/work/axel/stm_bootloader/
+argglobal
+enew
+file oil:///home/wandoka/work/axel/old_sensor_simulator/
+balt embedded_program/example_program_to_upload/example_main_slow_blinking.c
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

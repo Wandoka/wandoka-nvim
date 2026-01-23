@@ -1,0 +1,191 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd /mnt/c/programming/test
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/tasks/task_electromagnit.cpp
+badd +19 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet_handler.cpp
+badd +22 scripts/interactable_scene.gd
+badd +3 scripts/main.gd
+badd +3 scripts/scene_creator.gd
+badd +9 scripts/tscn_generator.gd
+badd +41 scripts/unit.gd
+badd +15 scripts/unit_scene.gd
+badd +25 shaders/side_glow.gdshader
+badd +1 animations/girl_walking.tres
+badd +1 scenes/level1_bus.tscn
+badd +1 scenes/main.tscn
+badd +20 scripts/interactable.gd
+badd +1 shaders/side_glow.tres
+badd +1 shaders/blinking_shader.gdshader
+badd +85 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/script_emulator.cpp
+badd +33 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/script_emulator.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/fid.cpp
+badd +14 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/fid.hpp
+badd +41 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/fid_table.cpp
+badd +7 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/mnemonic_table.cpp
+badd +235 ~/work/axel/turbo/tm_turbo_assisntant/common/aps/frontier.cpp
+badd +10 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/Player_hitbox_tileDetection.gd
+badd +82 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/Shrine\ Portal.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/Globals.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/ComboManager.gd
+badd +106 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/button_block.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/key_block.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/quickselect_screen.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/world.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/zone_general.gd
+badd +1 /mnt/c/Users/rl/OneDrive/Documents/exponaut___nonlinearity_and_strategic_scoring_based_platformer/Scripts/random_decoration.gd
+badd +1 /mnt/c/programming/test/project.godot
+badd +1 scripts/main.gd.uid
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.cpp
+badd +1 /mnt/c/programming/test/scripts/world.gd
+badd +3 /mnt/c/programming/test/scenes/world.tscn
+badd +1 /mnt/c/programming/test/scenes/menul.tscn
+badd +1 /mnt/c/programming/test/scripts/world.gd.uid
+badd +9 /mnt/c/programming/test/scenes/unit.tscn
+badd +6 /mnt/c/programming/test/scenes/object.tscn
+badd +1 /mnt/c/programming/test/scripts/generate_tscn_files.gd
+badd +1 /mnt/c/programming/test/scripts/unit_script.gd
+badd +1 /mnt/c/programming/test/Readme.txt
+badd +1 /mnt/c/programming/test/resources/parrot.jpg.import
+badd +1 /mnt/c/programming/test/scripts/unit_scene.gd.uid
+badd +1 /mnt/c/programming/test/resources/parrot.jpg
+badd +1 /mnt/c/programming/test/resources/elephant.png
+badd +1 /mnt/c/programming/test/resources/elephant.png.import
+badd +1 /mnt/c/programming/test/models/Baba.glb
+badd +1 /mnt/c/programming/test/models/Baba.glb.import
+badd +1 /mnt/c/programming/test/models/Baba_0.png
+badd +1 /mnt/c/programming/test/models/Baba_0.png.import
+badd +1 /mnt/c/programming/test/models/Baba_1.png
+badd +1 /mnt/c/programming/test/models/Baba_1.png.import
+badd +1 /mnt/c/programming/test/models/Baba_2.png
+badd +12 /mnt/c/work/axel2/turbo/turbo_1_9_3.axb
+badd +1 /mnt/c/work/axel2/turbo/code_composer_project/common/bootloader/host/dev.db
+badd +107 /mnt/c/work/axel2/turbo/code_composer_project/common/bootloader/host/serial_sacrum.txt
+badd +1 /mnt/c/programming/test/scripts/scene_generator.gd
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_aps.hpp
+badd +32 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/params_list.hpp
+badd +1 /mnt/c/programming/test/unit.tscn
+badd +2 /mnt/c/programming/test/.gitignore
+badd +1 /mnt/c/programming/test/generated_tscn/unit.tscn
+badd +1 /mnt/c/programming/roxy/Build.bat
+badd +1 /mnt/c/programming/roxy/BuildDebug.bat
+badd +1 /mnt/c/programming/roxy/BuildRelease.bat
+badd +1 /mnt/c/programming/roxy/CMakeLists.txt
+badd +1 /mnt/c/programming/roxy/Run.bat
+badd +1 /mnt/c/programming/roxy/errors.log
+badd +14 /mnt/c/programming/roxy/source/input_bar.cpp
+badd +1 /mnt/c/programming/roxy/source/roxy.h
+badd +1 /mnt/c/programming/roxy/source/logger.h
+badd +289 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/main.c
+badd +1 /mnt/c/programming/test/TODO.txt
+badd +1 /mnt/c/drawing\ progress/05.05.24.tif
+badd +1 /mnt/c/drawing\ progress/07.05.24.tif
+badd +169 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/main.c
+badd +1 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/my_func.h
+badd +1 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/task_webserver.c
+badd +49 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/task_rs485.c
+badd +1 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/sn65hvd234.h
+badd +97 ~/work/axel/old_sensor_simulator/SAM4E_EK_DEMO1/src/my_func.c
+badd +4 ~/work/axel/old_sensor_simulator/vasya_rasskazivayet_pro_proetk_04_12_2025.txt
+badd +1 /mnt/c/programming/test/resources/level2.jpg
+badd +1 /mnt/c/programming/test/resources/level2.jpg.import
+badd +1 /mnt/c/programming/test/scenes/world2.tscn
+badd +1 /mnt/c/programming/test/resources/level.jpg
+badd +1 /mnt/c/programming/test/resources/level.jpg.import
+badd +1 /usr/lib/libgstwebrtcnice-1.0.so.0.2607.0
+badd +242 /mnt/c/programming/test/GameDesign.txt
+badd +3 resources/bus.png
+badd +1 resources/bus.png.import
+badd +1 generated_tscn/interactable.tscn
+badd +1 resources/chair.png
+badd +1 generated_tscn/interactables/chair.tscn
+badd +1 generated_tscn/interactables/tidehunter.tscn
+badd +1 resources/Error.png
+badd +7 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/mnemonic.hpp
+badd +196 ~/work/axel/turbo/tm_turbo_assisntant/common/value.cpp
+badd +355 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/script_sysfuncs/script_sysfuncs.cpp
+badd +17 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/mnemonic_table.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/script_sysfuncs/script_sysfuncs.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet_handler.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/classes_from_virtual_machine.hpp
+badd +45 ~/work/axel/turbo/tm_turbo_assisntant/common/axelscript/emulator/main.cpp
+badd +49 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/measurements/variables_hub.hpp
+badd +11 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/fid_table.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/tasks/task_electromagnit.hpp
+badd +15 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/protocol.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet.cpp
+badd +25 shaders/magic_border.gdshader
+badd +1 scripts/interactable_generator.gd
+badd +2 scripts/collision_shape_generator.gd
+badd +1 shaders/blinking_shader.gdshader.uid
+badd +1 shaders/magic_border.gdshader.uid
+badd +6 scripts/inventory.gd
+badd +4 scripts/inventory_ui.gd
+badd +1 scenes/inventory.tscn
+badd +1 scenes/test_level.tscn.tscn
+badd +1 scripts/inventory_ui_scene.gd
+badd +140 ~/.zshrc
+badd +13 ~/.config/nvim/lsp/godot.lua
+badd +1 /mnt/c/Users/rl/.zshrc
+badd +1 ~/.config/nvim/lsp/clangd.lua
+badd +1 ~/.config/nvim/lsp/harper_ls.lua
+badd +26 ~/.config/nvim/init.lua
+badd +343 health://
+badd +45 ~/.config/nvim/lua/keybindings/general_nvim_keybindings.lua
+badd +27 ~/.config/nvim/lua/keybindings/godot.lua
+badd +4 ~/.config/nvim/lua/options/lazy.lua
+badd +1 ~/.config/nvim/lua/options/general_nvim_options.lua
+badd +41 ~/.config/nvim/lua/keybindings/competitest_cp_keybindings.lua
+badd +6 scripts/ctrl_c_exit.gd
+badd +1 oil:///mnt/c/programming/test/
+badd +1 term:///mnt/c/programming/test//2797:bash\ -lc\ \'godot.windows.opt.tools.64.exe\ /
+argglobal
+%argdel
+$argadd oil:///mnt/c/programming/test/
+edit ~/.config/nvim/lua/keybindings/godot.lua
+argglobal
+balt scripts/main.gd
+setlocal foldmethod=manual
+setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 27 - ((26 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 27
+normal! 02|
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

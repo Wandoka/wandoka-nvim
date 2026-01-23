@@ -1,0 +1,137 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/.config/nvim/lua/plugins
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +199 ~/work/axel/turbo/testing_turbo/HAL/IC/N25Q.cpp
+badd +25 ~/work/axel/turbo/integrating_new_logger/common/logger/log_storage.cpp
+badd +24 kanso-colorscheme.lua
+badd +1 CompetiTestTestcases227
+badd +1 CompetiTestErrors235
+badd +49 ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/colors.lua
+badd +277 ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/themes.lua
+badd +1 ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/utils.lua
+badd +1 ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/init.lua
+badd +12 treesitter-bettersyntexhighlighting.lua
+badd +1 ~/work/axel/turbo/integrating_new_logger/CompetiTestErrors235
+badd +131 ~/work/axel/turbo/integrating_new_logger/common/logger/log_service.h
+badd +1 ~/.local/bin/win32yank.exe
+badd +24 ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/highlights/syntax.lua
+badd +1 kanagawa-paper-colorscheme.lua
+badd +1 oil:///home/wandoka/.config/nvim/lua/plugins/
+badd +9 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_mem.hpp
+badd +13 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_mem.cpp
+argglobal
+%argdel
+$argadd oil:///home/wandoka/.config/nvim/lua/plugins/
+set stal=2
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+argglobal
+enew | setl bt=help
+help help.txt@en
+balt kanso-colorscheme.lua
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal nofoldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 211 - ((3 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 211
+normal! 05|
+tabnext
+edit ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/colors.lua
+argglobal
+setlocal foldmethod=manual
+setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 54 - ((31 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 54
+normal! 05|
+tabnext
+edit treesitter-bettersyntexhighlighting.lua
+argglobal
+balt ~/.local/share/nvim/lazy/kanso.nvim/lua/kanso/colors.lua
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 8 - ((7 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 8
+normal! 022|
+tabnext
+edit ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_mem.cpp
+argglobal
+balt ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_mem.hpp
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 36 - ((35 * winheight(0) + 23) / 47)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 36
+normal! 0
+tabnext 4
+set stal=1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

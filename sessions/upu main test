@@ -1,0 +1,207 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/work/axel/upu/testing_mainboard
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +27 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/main.c
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/functions_that_dll_provides.cpp
+badd +76 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/Program.cs
+badd +95 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/log_downloader.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/cyclic_buffer.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/cyclic_buffer.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/small_help_functions.cpp
+badd +42 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/logger.cpp
+badd +71 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_test.cpp
+badd +164 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_logger.cpp
+badd +3 ~/work/axel/upu/upload_to_upu_main.sh
+badd +8 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/log_queue.cpp
+badd +23 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/log_queue.hpp
+badd +21 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/log_downloader.hpp
+badd +7 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/data_exchanger_with_turbo.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_storage_open_log.cpp
+badd +121 ~/work/axel/turbo/tm_turbo_assistant/common/logger/lsector_header_handler.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/lsector_header_handler.hpp
+badd +52 ~/work/axel/turbo/tm_turbo_assistant/common/logger/lsector_header.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_incremental_id_interface.cpp
+badd +18 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_types.cpp
+badd +7 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_communicate_with_tm.cpp
+badd +25 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_iterator.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/send_logs_to_tm.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/lib_crc.hpp
+badd +7 ~/work/axel/turbo/tm_turbo_assistant/common/encrypt_tst/encr_tst.h
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/encrypt_tst/encr_tst.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/types.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/fibula/adp_aps/tasks/task_devui.cpp
+badd +13 ~/work/axel/turbo/tm_turbo_assistant/common/aes/aes_128_ofb.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/encrypt_tst/common/assert.h
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_incremental_id_interface.hpp
+badd +6 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/CMakeLists.txt
+badd +5 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/aes_128_ofb.hpp
+badd +42 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/TI_aes.h
+badd +3 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/encr_tst.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/encr_tst.h
+badd +106 /mnt/c/work/axel2/turbo/code_composer_project/common/bootloader/host/serial_sacrum.txt
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/data_exchanger_with_turbo.hpp
+badd +43 ~/work/axel/turbo/tm_turbo_assistant/common/logger/send_logs_to_tm.hpp
+badd +121 ~/work/axel/turbo/tm_turbo_assistant/common/aes/TI_aes.c
+badd +36 ~/work/axel/turbo/tm_turbo_assistant/common/aes/aes_128_ofb.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_log_downloader/TI_aes.cpp
+badd +40 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_communicate_with_tm.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_storage.cpp
+badd +63 ~/work/axel/turbo/tm_turbo_assistant/common/logger/lsectorized_memory.cpp
+badd +27 ~/work/axel/turbo/tm_turbo_assistant/common/logger/lsectorized_memory.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_types.hpp
+badd +57 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_storage.hpp
+badd +51 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_service.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_pending.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_pending.h
+badd +407 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_log.cpp
+badd +64 ~/work/axel/turbo/tm_turbo_assistant/common/devui/store_log_par_responder.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/devui/serial_devui.cpp
+badd +17 ~/work/axel/turbo/tm_turbo_assistant/common/devui/plain_par_responder.cpp
+badd +263 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_aps.cpp
+badd +115 ~/work/axel/turbo/tm_turbo_assistant/common/aps/aps_tm.h
+badd +1 ~/work/axel/turbo/aps_emulator/nnk_trans.cpp
+badd +59 ~/work/axel/turbo/iternal_ccs_build.sh
+badd +753 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_aps.cpp
+badd +185 ~/work/axel/turbo/testing_turbo/common/inclin_ch/incl_ch.cpp
+badd +132 ~/work/axel/turbo/testing_turbo/common/inclin_ch/incl_ch.h
+badd +108 ~/work/axel/turbo/testing_turbo/common/aps/aps_tm.cpp
+badd +105 ~/work/axel/turbo/aps_emulator/trans_init1.txt
+badd +24 ~/work/axel/turbo/tm_turbo_assistant/common/aps/aps_tm.cpp
+badd +169 ~/work/axel/turbo/tm_turbo_assistant/common/inclin_ch/incl_ch.cpp
+badd +337 ~/work/axel/turbo/tm_turbo_assistant/sacrum/pb/main.cpp
+badd +1 oil:///home/wandoka/work/axel/turbo/tm_turbo_assistant/
+badd +1 ~/notes/27.08.2025.txt
+badd +3408 ~/work/axel/turbo/turbo_log_parser/RawText.txt
+badd +441 ~/work/axel/turbo/tm_turbo_assistant/common/aps/incl.cpp
+badd +26 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/params_list.hpp
+badd +26 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/main.c
+badd +178 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_ram.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/params_list.cpp
+badd +315 ~/work/axel/turbo/testing_turbo/common/log_message/mnem_id.proto
+badd +84 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.cpp
+badd +54 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.hpp
+badd +25 ~/work/axel/turbo/testing_turbo/common/aps/incl.hpp
+badd +25 ~/work/axel/turbo/testing_turbo/common/aps/gamma_wpr.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/aps_slave.hpp
+badd +39 ~/work/axel/turbo/testing_turbo/common/aps/aps_palantir.h
+badd +560 ~/work/axel/turbo/testing_turbo/common/aps/aps_palantir.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/frontier_helper.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/frontier.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/aps_scanner.cpp
+badd +21 ~/work/axel/turbo/testing_turbo/common/aps/incl.cpp
+badd +241 ~/work/axel/turbo/testing_turbo/common/aps/aps_slave.cpp
+badd +24 ~/work/axel/turbo/testing_turbo/utils/inclin_ch_read/mnem_id.h
+badd +272 ~/work/axel/turbo/testing_turbo/utils/inclin_ch_read/incl_ch_rd.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/interlog_nnk.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/temp.txt
+badd +411 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_qbus.cpp
+badd +34 ~/work/axel/turbo/testing_turbo/sacrum/BSP/onewire_uart.cpp
+badd +236 ~/work/axel/turbo/testing_turbo/common/qbus/qbus_parser.re
+badd +100 ~/work/axel/turbo/testing_turbo/common/aps/aps_nnk.cpp
+badd +800 ~/work/axel/turbo/testing_turbo/common/qbus/qnic.cpp
+badd +29 ~/work/axel/turbo/testing_turbo/common/qbus/qbus_parser.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/slaves_controller.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/slave_thread.cpp
+badd +59 ~/work/axel/turbo/tm_turbo_assistant/common/inclin_ch/incl_ch.h
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/master.hpp
+badd +73 ~/work/axel/turbo/testing_turbo/common/qbus/master.cpp
+badd +87 ~/work/axel/turbo/testing_turbo/common/value.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/value.cpp
+badd +320 ~/work/axel/turbo/testing_turbo/common/adp_libs/task_adp_func.cpp
+badd +216 ~/work/axel/turbo/testing_turbo/fibula/adp_aps/tasks/task_adp.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/fibula/adp_aps/tasks/task_adp.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/mpt_scripts/main.scr
+badd +1 ~/work/axel/turbo/build_turbo.sh
+badd +1 ~/work/axel/turbo/build_current_project.sh
+badd +21 /mnt/c/work/axel2/turbo/code_composer_project/common/bootloader/host/ser_encr.sh
+badd +95 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test.cpp
+badd +9 ~/work/axel/turbo/testing_turbo/fibula/bootloader/LDR_main.c
+badd +28 ~/notes/on_changing_speed_in_UPU
+badd +999 mpr/m_incl.c
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_cbuf.cpp
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_qnic.cpp
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_eeprom_interface.c
+badd +45 ~/work/axel/upu/testing_mainboard/mpr/m_uart.c
+badd +1 ~/work/axel/upu/make_main.sh
+badd +22 ~/work/axel/upu/make_ind.sh
+badd +6 ~/work/axel/upu/make_proshivka_main.sh
+badd +5 ~/work/axel/upu/make_proshivka_ind.sh
+badd +4 ~/work/axel/upu/upload_to_upu_ind.sh
+badd +79 ~/work/axel/turbo/tm_turbo_assistant/HAL/MCU/ti28_serial.hpp
+badd +193 mpr/m_fifo.cpp
+badd +184 snf/c_hw.h
+badd +10 snf/c_uart.h
+badd +368 ~/work/axel/upu/testing_mainboard/mpr/m_hw.c
+badd +80 ~/work/axel/upu/testing_mainboard/mpr/m_uart.h
+badd +135 snf/c_uart.c
+badd +802 mpr/m_tstmain.c
+badd +129 mpr/m_hw.h
+badd +11 mpr/m_mode_switch.c
+badd +113 mpr/m_led.h
+badd +1 mpr/m_led.c
+badd +4 ~/work/axel/upu/testing_mainboard/mpr/m_mode_switch.h
+badd +145 ~/work/axel/upu/testing_indboard/mpr/m_incl.c
+badd +168 ~/work/axel/upu/testing_indboard/mpr/m_led.c
+badd +721 mpr/m_interface.cpp
+badd +62 ~/work/axel/upu/testing_indboard/mpr/m_interface.h
+badd +1 ~/work/axel/upu/testing_indboard/mpr/m_indic_btn.h
+badd +1 ~/work/axel/upu/testing_indboard/mpr/m_indic_btn.cpp
+badd +217 ~/work/axel/upu/testing_indboard/mpr/m_encoder.c
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_encoder_mainboard.h
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_encoder_mainboard.c
+badd +1 ~/work/axel/upu/testing_mainboard/mpr/m_test485.c
+badd +84 mpr/m_incl.h
+badd +0 oil:///home/wandoka/work/axel/upu/testing_mainboard/
+badd +25 mpr/m_interface.h
+badd +93 ftdi/ftd2xx.h
+argglobal
+%argdel
+$argadd oil:///home/wandoka/work/axel/upu/testing_mainboard/
+edit mpr/m_interface.cpp
+argglobal
+balt mpr/m_interface.h
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 721 - ((0 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 721
+normal! 014|
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

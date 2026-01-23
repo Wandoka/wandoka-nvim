@@ -1,0 +1,71 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/work/axel/tool_manager/toolmanager
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +1 term://~/work/axel/turbo/tm_turbo_assistant//1847:/usr/sbin/sh
+badd +1 term://~/work/axel/turbo/tm_turbo_assistant//1848:/usr/sbin/sh
+badd +41 DataTransferDSL/Run/Program.cs
+badd +1 DataTransferDSL/Run/Run.csproj
+badd +1 DataTransferDSL/Run/App.config
+badd +25 DataTransferDSL/Run/Properties/AssemblyInfo.cs
+badd +81 ToolManager/Tests/AxelTools.Tests/ProtoBuf/Generated/top.proto
+badd +1 SharedTests/TM.Emulator/Program.cs
+badd +48 term://~/work/axel/turbo/tm_turbo_assistant//2131:/bin/zsh;\#toggleterm\#1
+badd +450 ToolManager/ToolManager.Infrastructure/ToolManager.Infrastructure/Resources/Translations/TextData.resx
+badd +49 ToolManager/AxelTools.Module/Default/Initialize/ToolBuilder/DefaultToolBuilder.cs
+badd +1 oil:///home/wandoka/work/axel/tool_manager/toolmanager/
+badd +1 Common/Utilities/IO/FTDI/FTD2XX_EXTENSIONS.cs
+badd +141 ~/work/axel/tool_manager/toolmanager/Common/Utilities/IO/FTDI/FTD2XX_NET.cs
+badd +89 ToolManager/ToolManager.Infrastructure/ToolManager.Infrastructure/Transport/ToolConnectionProvider/FTDI/IPU/FtdiIpuProvider.cs
+badd +26 ToolManager/ToolManager.Infrastructure/ToolManager.Infrastructure/Transport/ToolConnectionProvider/FTDI/IPU/MpsseModeProvider.cs
+badd +10 ~/work/axel/turbo/tm_turbo_assistant/utils/tm_turbo_assistant/windows_com_port.h
+badd +27 Common/Utilities.Tests/FTDI/FTDITests.cs
+argglobal
+%argdel
+$argadd oil:///home/wandoka/work/axel/tool_manager/toolmanager/
+edit Common/Utilities.Tests/FTDI/FTDITests.cs
+argglobal
+balt ~/work/axel/tool_manager/toolmanager/Common/Utilities/IO/FTDI/FTD2XX_NET.cs
+setlocal foldmethod=manual
+setlocal foldexpr=0
+setlocal foldmarker={{{,}}}
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldenable
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 27 - ((26 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 27
+normal! 0
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

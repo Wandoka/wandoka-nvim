@@ -58,7 +58,11 @@ end
 -- - clangd relies on a [JSON compilation database](https://clang.llvm.org/docs/JSONCompilationDatabase.html)
 --   specified as compile_commands.json, see https://clangd.llvm.org/installation#compile_commandsjson
 return {
-  cmd = { 'clangd' },
+  cmd = { 
+    'clangd', 
+    '--background-index',
+    --'--query-driver=/usr/bin/gcc'
+  },
   filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
   root_markers = {
     '.clangd',

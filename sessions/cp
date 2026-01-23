@@ -13,31 +13,213 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 ~/troubles_with_nvim.txt
-badd +12 ~/personal/cp/workspace/main/main.cpp
-badd +1 oil:///home/wandoka/personal/cp/
+badd +753 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_aps.cpp
+badd +217 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/main.c
+badd +3408 ~/work/axel/turbo/turbo_log_parser/RawText.txt
+badd +103 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_test.cpp
+badd +59 ~/work/axel/turbo/tm_turbo_assistant/common/logger/log_pending.h
+badd +59 ~/work/axel/turbo/tm_turbo_assistant/common/aps/aps_tm.cpp
+badd +409 ~/work/axel/turbo/tm_turbo_assistant/common/inclin_ch/incl_ch.cpp
+badd +865 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_qbus.cpp
+badd +26 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/params_list.hpp
+badd +236 ~/work/axel/turbo/testing_turbo/common/qbus/qbus_parser.re
+badd +61 ~/work/axel/turbo/tm_turbo_assistant/common/aps/gamma_wpr.hpp
+badd +117 ~/notes/07112025.txt
+badd +84 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.cpp
+badd +1 oil:///home/wandoka/work/axel/turbo/testing_turbo/
+badd +1 ~/notes/27.08.2025.txt
+badd +441 ~/work/axel/turbo/tm_turbo_assistant/common/aps/incl.cpp
+badd +49 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/main.c
+badd +178 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_test_ram.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/params_list.cpp
+badd +315 ~/work/axel/turbo/testing_turbo/common/log_message/mnem_id.proto
+badd +54 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.hpp
+badd +25 ~/work/axel/turbo/testing_turbo/common/aps/incl.hpp
+badd +25 ~/work/axel/turbo/testing_turbo/common/aps/gamma_wpr.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/aps_slave.hpp
+badd +39 ~/work/axel/turbo/testing_turbo/common/aps/aps_palantir.h
+badd +560 ~/work/axel/turbo/testing_turbo/common/aps/aps_palantir.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/frontier_helper.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/frontier.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/aps/aps_scanner.cpp
+badd +21 ~/work/axel/turbo/testing_turbo/common/aps/incl.cpp
+badd +241 ~/work/axel/turbo/testing_turbo/common/aps/aps_slave.cpp
+badd +24 ~/work/axel/turbo/testing_turbo/utils/inclin_ch_read/mnem_id.h
+badd +272 ~/work/axel/turbo/testing_turbo/utils/inclin_ch_read/incl_ch_rd.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/interlog_nnk.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/temp.txt
+badd +411 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/tasks/task_qbus.cpp
+badd +34 ~/work/axel/turbo/testing_turbo/sacrum/BSP/onewire_uart.cpp
+badd +100 ~/work/axel/turbo/testing_turbo/common/aps/aps_nnk.cpp
+badd +800 ~/work/axel/turbo/testing_turbo/common/qbus/qnic.cpp
+badd +29 ~/work/axel/turbo/testing_turbo/common/qbus/qbus_parser.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/slaves_controller.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/slave_thread.cpp
+badd +59 ~/work/axel/turbo/tm_turbo_assistant/common/inclin_ch/incl_ch.h
+badd +1 ~/work/axel/turbo/testing_turbo/common/qbus/master.hpp
+badd +73 ~/work/axel/turbo/testing_turbo/common/qbus/master.cpp
+badd +87 ~/work/axel/turbo/testing_turbo/common/value.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/common/value.cpp
+badd +320 ~/work/axel/turbo/testing_turbo/common/adp_libs/task_adp_func.cpp
+badd +216 ~/work/axel/turbo/testing_turbo/fibula/adp_aps/tasks/task_adp.cpp
+badd +1 ~/work/axel/turbo/testing_turbo/fibula/adp_aps/tasks/task_adp.hpp
+badd +1 ~/work/axel/turbo/testing_turbo/sacrum/cb_aps/mpt_scripts/main.scr
+badd +1 ~/work/axel/turbo/build_turbo.sh
+badd +1 ~/work/axel/turbo/build_current_project.sh
+badd +21 /mnt/c/work/axel2/turbo/code_composer_project/common/bootloader/host/ser_encr.sh
+badd +1 ~/notes/30.07.2025.txt
+badd +78 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_devui.cpp
+badd +143 ~/work/axel/turbo/tm_turbo_assistant/fibula/adp_aps/tasks/task_aps_slave.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/map_storage/map_storage.cpp
+badd +148 ~/work/axel/turbo/tm_turbo_assistant/common/map_storage/map_storage.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/map_storage/savevar_storage.h
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/common/map_storage/savevar_storage.cpp
+badd +281 ~/work/axel/turbo/tm_turbo_assistant/test/test_map_storage.cpp
+badd +20 ~/work/axel/turbo/tm_turbo_assistant/common/devui/persistent_ram_param.hpp
+badd +45 ~/work/axel/turbo/tm_turbo_assistant/fibula/adp_aps/params_list.cpp
+badd +21 ~/work/axel/turbo/tm_turbo_assistant/common/adp_libs/debug/debug.h
+badd +121 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_speed_test.cpp
+badd +221 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_testmem.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assistant/sacrum/cb_aps/tasks/task_measure.cpp
+badd +27 ~/work/axel/turbo/tm_turbo_assistant/sacrum/BSP/eeprom4storage.cpp
+badd +1 term://~/work/axel/turbo/tm_turbo_assistant//1130:/usr/sbin/sh
+badd +1 ~/work/axel/turbo/testing_turbo/CMakeLists.txt
+badd +1 ~/work/axel/turbo/testing_turbo/Doxyfile
+badd +73 ~/work/axel/turbo/tm_turbo_assistant/sacrum/BSP/spi.cpp
+badd +106 ~/work/axel/turbo/tm_turbo_assistant/HAL/IC/hda_8mb08sf.cpp
+badd +371 ~/work/axel/turbo/tm_turbo_assistant/HAL/IC/MIC_25LC256.cpp
+badd +50 ~/notes/kek
+badd +1 ~/notes/on_changing_speed_in_UPU
+badd +166 ~/work/axel/turbo/integrating_new_logger/utils/tm_turbo_log_downloader/log_downloader.cpp
+badd +363 /usr/include/stdio.h
+badd +1 ~/notes/25.07.2025.txt
+badd +2 ~/notes/29.07.2025.txt
+badd +1 ~/notes/temp
+badd +1 oil:///home/wandoka/notes/
+badd +1 /usr/src/debug/gcc/gcc/libstdc++-v3/libsupc++/vterminate.cc
+badd +1 ~/.config/nvim/lua/plugins/kanso-colorscheme.lua
+badd +115 workspace/main/main.cpp
+badd +1 workspace/main/debug_input.txt
+badd +1 /usr/src/debug/gcc/gcc/libstdc++-v3/src/c++11/assert_fail.cc
+badd +1263 /usr/include/c++/15.1.1/bits/stl_vector.h
+badd +63 /usr/include/c++/15.1.1/bits/invoke.h
+badd +593 /usr/include/c++/15.1.1/bits/std_function.h
+badd +1 /usr/src/debug/gcc/gcc/libsanitizer/ubsan/ubsan_handlers_cxx.cpp
+badd +1 /usr/src/debug/gcc/gcc-build/x86_64-pc-linux-gnu/libstdc++-v3/include/bits/istream.tcc
+badd +12 ~/personal/cp/checker.sh
+badd +1 ~/personal/game_test/game.cpp
+badd +130 ~/personal/cp/workspace/solution/solution.cpp
+badd +1 ~/personal/cp/workspace/solution/solution
+badd +1 ~/personal/cp/workspace/solution/solution.testcases
+badd +1 ~/personal/cp/workspace/main/main.testcases
+badd +1 ~/personal/cp/workspace/main/main
+badd +118 ~/personal/cp/workspace/brute/brute.cpp
+badd +153 ~/personal/cp/workspace/test_generator/test_generator.cpp
+badd +1 ~/personal/cp/.tasks
+badd +1 ~/personal/cp/.gitignore
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/Brute/Brute.cpp
+badd +121 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/Solution/Solution.cpp
+badd +88 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/TestGenerator/TestGenerator.cpp
+badd +39 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/info/template.cpp
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/main/debug
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/main/kek
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/main/main
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/main/main.cpp
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/main/main_input0.txt
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/temp1A/temp1A.cpp
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/checker
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/compile_flags.txt
+badd +1 /mnt/c/work/backups/ubuntu_old/ubuntu_old/programming/personal/cp/ideas.txt
+badd +1 /mnt/c/cp/files_for_cpeditor/template_for_cp_tool.cpp.txt
+badd +1 /mnt/c/cp/files_for_cpeditor/compile_flags.txt
+badd +1 /mnt/c/cp/files_for_cpeditor/settings_for_cp_editor.cpeditor
+badd +1 /mnt/c/cp/files_for_cpeditor/template.cpp
+badd +1 /mnt/c/cp/info/flags_info_rus.txt
+badd +1 /mnt/c/cp/info/readme.txt
+badd +1 /mnt/c/cp/info/scripts_setup_in_user_folder.txt
+badd +1 /mnt/c/cp/premadetests/дерево1.cpp
+badd +1 /mnt/c/cp/premadetests/дерево1.png
+badd +1 /mnt/c/cp/scripts/checker.bat
+badd +1 /mnt/c/cp/scripts/cpconsole.bat
+badd +1 /mnt/c/cp/scripts/debug.bat
+badd +1 /mnt/c/cp/scripts/debug_input.txt
+badd +1 /mnt/c/cp/scripts/gdb_startup_commands.txt
+badd +1 /mnt/c/cp/scripts/main.o
+badd +1 /mnt/c/cp/scripts/output.txt
+badd +1 /mnt/c/cp/scripts/run.bat
+badd +1 /mnt/c/cp/scripts/test.bat
+badd +1 /mnt/c/cp/scripts/test.txt
+badd +1 /mnt/c/cp/scripts/validator.bat
+badd +1 /mnt/c/cp/source/Brute.cpp
+badd +1 /mnt/c/cp/source/TestGenerator.cpp
+badd +1 /mnt/c/cp/source/Untitled-1.cpp
+badd +1 /mnt/c/cp/source/Validator.cpp
+badd +1 /mnt/c/cp/source/main.cpp
+badd +1 /mnt/c/cp/source/temp1A.cpp
+badd +1 /mnt/c/cp/source/temp2B.cpp
+badd +1 /mnt/c/cp/source/temp3C.cpp
+badd +1 /mnt/c/cp/temp_test/kek
+badd +1 /mnt/c/cp/temp_test/kek.cpp
+badd +1 /mnt/c/cp/vim/snippets/cnk.cpp
+badd +1 /mnt/c/cp/vim/snippets/dsu.cpp
+badd +1 /mnt/c/cp/vim/snippets/hash.cpp
+badd +1 /mnt/c/cp/vim/snippets/intmod.cpp
+badd +1 /mnt/c/cp/vim/snippets/zfunction.cpp
+badd +1 /mnt/c/cp/vim/snippets/vague.cpp
+badd +1 ~/personal/cp/snippets/cnk.cpp
+badd +1 ~/personal/cp/snippets/dsu.cpp
+badd +1 ~/personal/cp/snippets/hash.cpp
+badd +1 ~/personal/cp/snippets/intmod.cpp
+badd +1 ~/personal/cp/snippets/segtree_min.cpp
+badd +1 ~/personal/cp/snippets/vague.cpp
+badd +1 ~/personal/cp/snippets/zfunction.cpp
+badd +1 ~/personal/cp/snippets/template.cpp
+badd +1 ~/personal/cp/workspace/brute/brute
+badd +355 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/script_sysfuncs/script_sysfuncs.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/script_emulator.cpp
+badd +28 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet_handler.cpp
+badd +7 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet_handler.hpp
+badd +14 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/highlevel/fid_table.hpp
+badd +46 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/tasks/task_electromagnit.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/sacrum/cb_aps/tasks/task_electromagnit.hpp
+badd +71 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/protocol.cpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet.hpp
+badd +1 ~/work/axel/turbo/tm_turbo_assisntant/common/electromagnit/lowlevel/packet.cpp
+badd +14 /mnt/c/programming/test/project.godot
+badd +1 /mnt/c/programming/test/shaders/blinking_shader.gdshader
+badd +1 /mnt/c/programming/test/shaders/magic_border.gdshader
+badd +21 /mnt/c/programming/test/scripts/interactable.gd
+badd +1 /mnt/c/programming/test/resources/Error.png
+badd +1 /mnt/c/programming/test/animations/girl_walking.tres
+badd +6 /mnt/c/programming/test/scenes/main.tscn
+badd +5 CompetiTestTestcases206
+badd +73 /mnt/c/Users/rl/OneDrive/Рабочий\ стол/bdayana.md
+badd +8 test.cpp
+badd +22 /mnt/c/programming/test/scripts/interactable_scene.gd
+badd +4 /mnt/c/programming/test/scripts/collision_shape_generator.gd
+badd +1 /mnt/c/Users/rl/cpconsole.bat
 argglobal
 %argdel
 $argadd oil:///home/wandoka/personal/cp/
-edit ~/personal/cp/workspace/main/main.cpp
+edit /mnt/c/programming/test/scripts/collision_shape_generator.gd
 argglobal
-balt ~/troubles_with_nvim.txt
+balt /mnt/c/programming/test/scripts/interactable_scene.gd
 setlocal foldmethod=manual
-setlocal foldexpr=0
+setlocal foldexpr=<SNR>49_GDScriptFoldLevel()
 setlocal foldmarker={{{,}}}
-setlocal foldignore=#
+setlocal foldignore=
 setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 24) / 48)
+let s:l = 4 - ((3 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 024|
+keepjumps 4
+normal! 036|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
