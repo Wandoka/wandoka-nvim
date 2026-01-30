@@ -30,21 +30,37 @@ local search_actions = {
   }
 }
 
-for _, action in ipairs(search_actions) do
-  vim.keymap.set({'n', 'v'}, '<Leader>s'..action.button..'f', function()
-    vim.cmd("Fzf files " .. action.path)
-end, { silent = true, desc = "<wandoka> Search files ("..action.type..")" })
 
+for _, action in ipairs(search_actions) do
+  local base_opts = {}
+  if action.path ~= "" then
+    base_opts.cwd = action.path:gsub("cwd=", "")  -- преобразуем cwd=~/ в ~/
+  end
+
+  vim.keymap.set({'n', 'v'}, '<Leader>s'..action.button..'f', function()
+    require("fzf-lua").files(vim.tbl_extend("force", base_opts, {
+      file_ignore_patterns = { "%.uid$" },
+      -- можно добавить другие паттерны, если нужно: "%.bak$", "%.tmp$" и т.д.
+    }))
+  end, { silent = true, desc = "<wandoka> Search files ("..action.type..")" })
+
+  -- аналогично для остальных
   vim.keymap.set({'n', 'v'}, '<Leader>s'..action.button..'w', function()
-    vim.cmd("Fzf grep_cword " .. action.path)
+    require("fzf-lua").grep_cword(vim.tbl_extend("force", base_opts, {
+      file_ignore_patterns = { "%.uid$" }
+    }))
   end, { silent = true, desc = "<wandoka> Search current word ("..action.type..")" })
 
   vim.keymap.set({'n', 'v'}, '<Leader>s'..action.button..'W', function()
-    vim.cmd("Fzf grep_cWORD " .. action.path)
+    require("fzf-lua").grep_cWORD(vim.tbl_extend("force", base_opts, {
+      file_ignore_patterns = { "%.uid$" }
+    }))
   end, { silent = true, desc = "<wandoka> Search current WORD ("..action.type..")" })
 
   vim.keymap.set({'n', 'v'}, '<Leader>s'..action.button..'t', function()
-    vim.cmd("Fzf live_grep " .. action.path)
+    require("fzf-lua").live_grep(vim.tbl_extend("force", base_opts, {
+      file_ignore_patterns = { "%.uid$" }
+    }))
   end, { silent = true, desc = "<wandoka> Search text ("..action.type..")" })
 end
 

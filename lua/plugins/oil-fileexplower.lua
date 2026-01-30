@@ -14,8 +14,8 @@ return {
         if name:match("^%.") then
           return true
         end
-        -- оканчивается на ".gd.uid" — обратите внимание: точки экранированы
-        if name:match("%.gd%.uid$") then
+        -- оканчивается на ".uid" — обратите внимание: точки экранированы
+        if name:match("%.uid$") then
           return true
         end
         return false

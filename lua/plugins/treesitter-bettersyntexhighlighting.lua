@@ -6,7 +6,7 @@ return {
     config = function()
       require("nvim-treesitter.configs").setup {
         ensure_installed = {
-          "lua", "python", "javascript", "html", "css", "json", "cpp", "c_sharp" -- сюда добавляй нужные языки
+          "lua", "python", "javascript", "html", "css", "json", "cpp", "c_sharp", "gdscript" -- сюда добавляй нужные языки
         },
         highlight = {
           enable = true,
