@@ -1,3 +1,20 @@
+local tt = require("toggleterm.terminal")
+
+local function restart_default_term_and_exec(cmd)
+  -- Находим дефолтный терминал (обычно id=1, если не создавали другие вручную)
+  local default_term = tt.get(1)  -- или tt.get_focused() если хочешь текущий фокусированный, но лучше 1 для дефолтного
+
+  if default_term then
+    default_term:shutdown()  -- убивает процесс (lazygit и т.п.), закрывает буфер
+    -- Можно добавить небольшую задержку, если иногда toggleterm глючит после shutdown
+    -- vim.defer_fn(function() ... end, 50) — но обычно не нужно
+  end
+
+  -- Теперь запускаем в свежем дефолтном терминале
+  vim.cmd("TermExec cmd='" .. cmd .. " 2>&1 | tr -cd \"[:print:]\\\\n\"'")
+end
+
+
 local function run_godot_scene()
   local root = vim.fn.getcwd()
   local win_path = root:gsub('/mnt/(%l)/', '%1:/')
@@ -25,7 +42,7 @@ local function run_godot_scene()
   local godot_cmd = string.format('godot.windows.opt.tools.64.exe --path "%s" --scene "res://run_scene.tscn" -- %s', win_path, tscn_path)  
   
   vim.notify(godot_cmd)
-  vim.cmd("TermExec cmd='" .. godot_cmd .. " 2>&1 | tr -cd \"[:print:]\\\\n\"'")
+  restart_default_term_and_exec(godot_cmd)
 
 end
 
@@ -33,14 +50,14 @@ local function run_godot_game()
   local root = vim.fn.getcwd()
   local win_path = root:gsub('/mnt/(%l)/', '%1:/')
   local godot_cmd = string.format('godot.windows.opt.tools.64.exe --path "%s" --run', win_path)
-  vim.cmd("TermExec cmd='" .. godot_cmd .. " 2>&1 | tr -cd \"[:print:]\\\\n\"'")
+  restart_default_term_and_exec(godot_cmd)
 end
 
 local function run_godot_test_run()
   local root = vim.fn.getcwd()
   local win_path = root:gsub('/mnt/(%l)/', '%1:/')
   local godot_cmd = string.format('godot.windows.opt.tools.64.exe --scene "res://test_run.tscn" --run', win_path)
-  vim.cmd("TermExec cmd='" .. godot_cmd .. " 2>&1 | tr -cd \"[:print:]\\\\n\"'")
+  restart_default_term_and_exec(godot_cmd)
 end
 
 -- Create user command

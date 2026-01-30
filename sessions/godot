@@ -29,7 +29,7 @@ badd +1 _scripts/inventory.gd
 badd +1 _scripts/inventory_ui.gd
 badd +1 _scripts/level.gd
 badd +8 _scripts/main.gd
-badd +22 _scripts/unit.gd
+badd +1 _scripts/unit.gd
 badd +47 TODO_29_01_2026.txt
 badd +11 _data/item_data.gd
 badd +1 _resources/item_resource.gd
@@ -171,31 +171,30 @@ badd +1 /mnt/c/programming/test/_tools/debug.gd
 badd +1 debug.gd
 badd +1 _testing/debug.gd.uid
 badd +1 /mnt/c/programming/test/_testing/test_run.gd
-badd +3 /mnt/c/programming/test/test_run.tscn
+badd +4 /mnt/c/programming/test/test_run.tscn
 badd +1 debug.tscn
-badd +0 oil:///mnt/c/programming/test/
 argglobal
 %argdel
 $argadd oil:///mnt/c/programming/test/
-edit /mnt/c/programming/test/test_run.tscn
+edit _scripts/unit.gd
 argglobal
-balt _scripts/unit.gd
+balt /mnt/c/programming/test/test_run.tscn
 setlocal foldmethod=manual
-setlocal foldexpr=0
+setlocal foldexpr=<SNR>39_GDScriptFoldLevel()
 setlocal foldmarker={{{,}}}
-setlocal foldignore=#
+setlocal foldignore=
 setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 24) / 48)
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 031|
+keepjumps 1
+normal! 06|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
