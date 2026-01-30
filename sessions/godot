@@ -16,21 +16,21 @@ endif
 badd +1 _scenes/level_scene.gd
 badd +1 _scenes/unit_scene.gd
 badd +9 _scenes/inventory_ui_scene.gd
-badd +16 _tools/run_scene.gd
+badd +1 _tools/run_scene.gd
 badd +19 _scenes/interactable_scene.gd
 badd +1 project.godot
 badd +1 _tools/build_scene.gd
 badd +1 _tools/collision_shape_generator.gd
 badd +1 _tools/scene_creator.gd
-badd +28 _scripts/interactable.gd
+badd +1 _scripts/interactable.gd
 badd +1 _scenes/level_bus_scene.gd
 badd +2 _tools/ctrl_c_exit.gd
 badd +1 _scripts/inventory.gd
 badd +1 _scripts/inventory_ui.gd
 badd +1 _scripts/level.gd
-badd +7 _scripts/main.gd
-badd +12 _scripts/unit.gd
-badd +1 TODO_29_01_2026.txt
+badd +8 _scripts/main.gd
+badd +22 _scripts/unit.gd
+badd +47 TODO_29_01_2026.txt
 badd +11 _data/item_data.gd
 badd +1 _resources/item_resource.gd
 badd +3 main.tscn
@@ -129,7 +129,7 @@ badd +1 ~/.config/nvim/lsp/harper_ls.lua
 badd +26 ~/.config/nvim/init.lua
 badd +343 health://
 badd +45 ~/.config/nvim/lua/keybindings/general_nvim_keybindings.lua
-badd +1 ~/.config/nvim/lua/keybindings/godot.lua
+badd +27 ~/.config/nvim/lua/keybindings/godot.lua
 badd +4 ~/.config/nvim/lua/options/lazy.lua
 badd +1 ~/.config/nvim/lua/options/general_nvim_options.lua
 badd +41 ~/.config/nvim/lua/keybindings/competitest_cp_keybindings.lua
@@ -167,30 +167,35 @@ badd +1 text_files/TODO_28_01_2026.txt
 badd +1 _shaders_code/magic_border.gdshader.uid
 badd +15 generated_tscn/level.tscn
 badd +1 _tools/scene_creator.gd.uid
-badd +4 oil:///mnt/c/programming/test/_tools/
-badd +1 oil:///mnt/c/programming/test/
+badd +1 /mnt/c/programming/test/_tools/debug.gd
+badd +1 debug.gd
+badd +1 _testing/debug.gd.uid
+badd +1 /mnt/c/programming/test/_testing/test_run.gd
+badd +3 /mnt/c/programming/test/test_run.tscn
+badd +1 debug.tscn
+badd +0 oil:///mnt/c/programming/test/
 argglobal
 %argdel
 $argadd oil:///mnt/c/programming/test/
-edit _tools/run_scene.gd
+edit /mnt/c/programming/test/test_run.tscn
 argglobal
-balt _scenes/level_scene.gd
+balt _scripts/unit.gd
 setlocal foldmethod=manual
-setlocal foldexpr=<SNR>38_GDScriptFoldLevel()
+setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
-setlocal foldignore=
+setlocal foldignore=#
 setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 16 - ((15 * winheight(0) + 24) / 48)
+let s:l = 3 - ((2 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 16
-normal! 0
+keepjumps 3
+normal! 031|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
