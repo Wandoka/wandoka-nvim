@@ -24,5 +24,6 @@ require("keybindings.general_nvim_keybindings")
 require("keybindings.competitest_cp_keybindings")
 require("keybindings.debugger_keybindings")
 require("keybindings.godot")
+require("keybindings.tabs")
 -----------------------------------------------------------------------
 -----------------------------------------------------------------------

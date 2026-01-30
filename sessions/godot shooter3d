@@ -63,7 +63,7 @@ badd +1 /mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/sprites/crosshair.png
 badd +1 /mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/sprites/hit.png
 badd +1 /mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/sprites/hit.png.import
 badd +1 /mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/sprites/skybox.png.import
-badd +0 oil:///mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/
+badd +1 oil:///mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/
 argglobal
 %argdel
 $argadd oil:///mnt/c/Users/rl/OneDrive/Documents/starter-kit-fps/

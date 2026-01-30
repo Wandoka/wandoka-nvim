@@ -10,7 +10,7 @@ local function run_godot_scene()
 
   local base = vim.fn.fnamemodify(current_file, ':r')
   base = base:gsub('_scene$', '')
-  local target = base .. '.tscn'
+  local target = base .. '_scene.gd'
 
 
   local find_cmd = string.format('find . -type f -name "%s" -print -quit', target)
@@ -22,10 +22,10 @@ local function run_godot_scene()
   end 
 
   local tscn_path = 'res://' .. selected:gsub('^%./', ''):gsub('\\', '/')
-  local godot_cmd = string.format('godot.windows.opt.tools.64.exe --path "%s" --scene "%s"', win_path, tscn_path)  
-
-  vim.cmd("TermExec cmd='" .. godot_cmd .. " 2>&1 | tr -cd \"[:print:]\\\\n\"'")
+  local godot_cmd = string.format('godot.windows.opt.tools.64.exe --path "%s" --scene "res://run_scene.tscn" -- %s', win_path, tscn_path)  
+  
   vim.notify(godot_cmd)
+  vim.cmd("TermExec cmd='" .. godot_cmd .. " 3>&1 | tr -cd \"[:print:]\\\\n\"'")
 
 end
 -- Create user command

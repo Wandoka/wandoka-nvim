@@ -13,6 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_example.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_example2.py
+badd +623 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_funcs.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_firmwareaccepatance.py
+badd +18 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_executor.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/cb2pb_printer.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/scales.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/serial_logger.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/test_script_DrillingTest.py
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/requirements.txt
+badd +1 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/ds_mock.py
 badd +81 ~/work/axel/turbo/tm_turbo_assistant/common/aps/aps_tm.cpp
 badd +1 ~/work/axel/turbo/testing_turbo/common/aps/rss_energy.cpp
 badd +1 term://~/work/axel/turbo/tm_turbo_assistant//1211:/usr/sbin/sh
@@ -37,14 +48,14 @@ badd +1 /mnt/c/programming/test/scripts/button.gd.uid
 badd +6 lua/plugins/debugmaster-DebugInterface.lua
 badd +53 lua/keybindings/competitest_cp_keybindings.lua
 badd +23 lua/keybindings/debugger_keybindings.lua
-badd +93 lua/keybindings/general_nvim_keybindings.lua
+badd +1 lua/keybindings/general_nvim_keybindings.lua
 badd +2 lua/plugins/nvim-neoclip-yankhistory.lua
 badd +1 ~/testing/main.cpp
 badd +1 README.md
 badd +1 ~/testing/\[dap-terminal]\ Debug\ executable
 badd +22 lua/plugins/oil-fileexplower.lua
 badd +24 lua/plugins/posession-session-manager.lua
-badd +4 lua/plugins/leap-cursor_movement.lua
+badd +6 lua/plugins/leap-cursor_movement.lua
 badd +9 lua/plugins/markview.lua
 badd +1 lua/compilation_flags.lua
 badd +1 lua/options/general_nvim_options.lua
@@ -63,13 +74,30 @@ badd +3 ~/.config/nvim/lua/plugins/DISABLE_nvim-lint-text_linting.lua
 badd +1 ~/.config/nvim/lua/plugins/competitest-competitive-programming.lua
 badd +4 ~/.config/nvim/lua/plugins/DISABLE_doing-todo_plugin.lua
 badd +1 ~/.config/nvim/lua/plugins/blink-autocomplete.lua
-badd +40 lua/keybindings/godot.lua
+badd +28 lua/keybindings/godot.lua
+badd +1 /mnt/c/programming/test/scripts/main.gd
+badd +2 /mnt/c/programming/test/scripts/inventory_ui_scene.gd
+badd +1 /mnt/c/programming/test/scripts/scene_creator.gd
+badd +1 /mnt/c/programming/test/scripts/inventory_ui.gd
+badd +3 /mnt/c/programming/test/scripts/inventory.gd
+badd +1 /mnt/c/programming/test/scripts/interactable_scene.gd
+badd +1 /mnt/c/programming/test/scripts/ctrl_c_exit.gd
+badd +1 /mnt/c/programming/test/scripts/collision_shape_generator.gd
+badd +1 /mnt/c/programming/test/scripts/interactable.gd
+badd +9 /mnt/c/programming/test/scripts/tscn_generator.gd
+badd +1 /mnt/c/programming/test/scripts/unit.gd
+badd +1 /mnt/c/programming/test/scripts/unit_scene.gd
+badd +5 lua/plugins/harpoon-jumpbetweenfiles.lua
+badd +1 lua/keybindings/harpoon.lua
+badd +3 lua/keybindings/tabs.lua
+badd +121 ~/.local/state/nvim/lazy/readme/doc/harpoon.md
+badd +3 /mnt/c/work/axel2/python_device_emulator_scripts/turbo-stand/decoderManipulator.py
 argglobal
 %argdel
 $argadd README.md
-edit init.lua
+edit lua/keybindings/godot.lua
 argglobal
-balt lua/options/general_nvim_options.lua
+balt lua/keybindings/tabs.lua
 setlocal foldmethod=manual
 setlocal foldexpr=v:lua.vim.treesitter.foldexpr()
 setlocal foldmarker={{{,}}}
@@ -80,12 +108,12 @@ setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 26 - ((25 * winheight(0) + 24) / 48)
+let s:l = 27 - ((26 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 26
-normal! 026|
+keepjumps 27
+normal! 04|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -99,7 +127,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

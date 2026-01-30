@@ -98,7 +98,7 @@ badd +1 ~/notes/temp
 badd +1 oil:///home/wandoka/notes/
 badd +1 /usr/src/debug/gcc/gcc/libstdc++-v3/libsupc++/vterminate.cc
 badd +1 ~/.config/nvim/lua/plugins/kanso-colorscheme.lua
-badd +115 workspace/main/main.cpp
+badd +113 workspace/main/main.cpp
 badd +1 workspace/main/debug_input.txt
 badd +1 /usr/src/debug/gcc/gcc/libstdc++-v3/src/c++11/assert_fail.cc
 badd +1263 /usr/include/c++/15.1.1/bits/stl_vector.h
@@ -198,28 +198,29 @@ badd +8 test.cpp
 badd +22 /mnt/c/programming/test/scripts/interactable_scene.gd
 badd +4 /mnt/c/programming/test/scripts/collision_shape_generator.gd
 badd +1 /mnt/c/Users/rl/cpconsole.bat
+badd +1 oil:///home/wandoka/personal/cp/
 argglobal
 %argdel
 $argadd oil:///home/wandoka/personal/cp/
-edit /mnt/c/programming/test/scripts/collision_shape_generator.gd
+edit workspace/main/main.cpp
 argglobal
-balt /mnt/c/programming/test/scripts/interactable_scene.gd
+balt ~/personal/cp/workspace/main/main
 setlocal foldmethod=manual
-setlocal foldexpr=<SNR>49_GDScriptFoldLevel()
+setlocal foldexpr=0
 setlocal foldmarker={{{,}}}
-setlocal foldignore=
+setlocal foldignore=#
 setlocal foldlevel=0
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldenable
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 24) / 48)
+let s:l = 123 - ((7 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
-normal! 036|
+keepjumps 123
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
