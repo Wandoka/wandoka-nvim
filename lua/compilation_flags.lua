@@ -19,9 +19,10 @@ flags.cpp_competitive_programming = {
   '-fno-omit-frame-pointer',
   '-fno-optimize-sibling-calls',
   '-fsanitize=undefined,address,float-divide-by-zero,float-cast-overflow',
-  '-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG',
+  --'-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_DEBUG',
   '-stdlib=libc++',
-  '-DWANDOKA'
+  '-I/home/wandoka/personal/cp/fix_bits_std/',
+  '-DWANDOKA',
 }
 
 return flags
