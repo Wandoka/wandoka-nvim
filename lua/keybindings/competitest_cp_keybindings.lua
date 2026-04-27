@@ -39,7 +39,7 @@ vim.keymap.set(
     local filedir = vim.fn.expand("%:p:h")
     local flags_str = table.concat(flags, " ")
     vim.cmd("TermExec cmd='cd " .. filedir .. " && clear'");
-    vim.cmd("TermExec cmd='clear && g++ " .. flags_str .. " " .. filename .. " -o " .. filenoext .. " && ./" .. filenoext .. "'")
+    vim.cmd("TermExec cmd='clear && clang++ " .. flags_str .. " " .. filename .. " -o " .. filenoext .. " && ./" .. filenoext .. "'")
   end,
   { noremap = true, silent = true, desc = "<wandoka> run current cpp" }
 )

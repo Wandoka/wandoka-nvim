@@ -5,8 +5,18 @@ return {
   dependencies = 'MunifTanjim/nui.nvim',
   config = function() require('competitest').setup { 
 	  compile_command = {
-		  cpp = { exec = "g++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", unpack(compilation_flags.cpp_competitive_programming)}}
+		  cpp = { exec = "clang++", args = { "-Wall", "$(FNAME)", "-o", "$(FNOEXT)", unpack(compilation_flags.cpp_competitive_programming)}}
     },
+    run_command = {
+        cpp = {
+            exec = "env",                     -- используем утилиту env
+            args = {
+                "UBSAN_OPTIONS=print_stacktrace=1:print_summary=0:halt_on_error=1:print_legend=0",
+                "ASAN_OPTIONS=print_stacktrace=1:print_summary=0:print_legend=0:halt_on_error=1",
+                "./$(FNOEXT)",
+            },
+        },
+    },    
     runner_ui = {
 		  interface = "popup",
       viewer = {
